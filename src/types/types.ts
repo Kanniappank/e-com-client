@@ -1,3 +1,4 @@
-export const types={
-
+export interface userType {
+    name: string;
+    role: number;
 }

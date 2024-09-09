@@ -1,7 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { userType } from "../types/types";
 
-const initialState = {
-    user: null
+
+
+
+const initialState :{ user: userType | null }= {
+    user: {
+        name:'Kanniappan',
+        role :3
+    } 
 }
 
 export const userSlice = createSlice({
@@ -12,7 +19,7 @@ export const userSlice = createSlice({
             state.user = action.payload
         },
         removeUser: (state, action) => {
-            state.user = null
+            state.user= null
         }
     }
 })
